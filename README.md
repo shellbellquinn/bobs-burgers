@@ -2,28 +2,6 @@
 <p>A full stack, MVC (Model-View-Controller) application that allows you to create burgers (POST), view a list of burgers available to eat (GET), devour burgers (PUT), and throw them away after devoured (DELETE).</p>
 <img src="./public/assets/img/cheeseburger.png">
 
-## Table of contents
-  * [Live](#live)
-  * [About this project](#about-this-project)
-  * [Getting started](#getting-started)
-  * [Structure of the project](#structure-of-project)
-  * [Screenshots](#screenshots)
-  * [Technologies used to create app](#technologies-used)
-  	* [Backend technologies](#Backend)
-  	* [Frontend technologies](#Frontend)
-  * [Design improvements](#design-improvements)
-  * [Acknowledgments](#Acknowledgments)
-  * [Issues](#Issues)
-
-## <a name="live"></a>Live
-https://gentle-caverns-56054.herokuapp.com/
-
-## <a name="about-this-project"></a> About this project
-
-  * [How the app works](#how-app-works)
-  * [How the app is built](#how-the-app-is-built)
-  * [MVC design pattern](#about-mvc)
- 
 ### <a name="how-app-works"></a> How the app works
 This project is a full stack application that allows you to place an order for a burger. When you place an order, the burger you enter in the form field is added to the list of burgers on the left side of the screen. Each burger in the list has a <b>Devour me</b> button. Clicking this button moves the burger from the list on the left side of the screen to the list on the right. The list on the right is a list of burgers that have already been devoured. Each burger in this list has a <b>Throw away</b> button that allows you to remove the burger, which deletes the burger from the user interface as well as from the MySQL database. 
 
@@ -246,17 +224,3 @@ node server.js
 * Javascript
 * jQuery (https://jquery.com/)
 * Handlebars (http://handlebarsjs.com/)
-
-
-## <a name="design-improvements"></a> Design improvements
-* Add a form field that allows users to provide their name with the burger they ordered.
-* Allow users to update a burger's name after it is created.
-* Add form validation so that the user can't submit an empty form (burger_name is null);
-
-## <a name="Acknowledgments"></a> Acknowledgments 
-* Background photo by Gianna Ciaramello on <a href="https://www.unsplash.com">Unsplash.com</a>
-* <a href="https://www.iconfinder.com/">Iconfinder</a> for Devour me burger icon and burger icon located in Jumbotron.
-* <a href="https://fontawesome.com/icons?d=gallery">Font Awesome</a> for Throw away burger/trash can icon.
-
-## <a name ="Issues"></a> Issues
-<p>If you find an issue while using the app or have a request, <a href="https://github.com/philipstubbs13/burger/issues/" target="_blank">log the issue or request here</a>. These issues will be addressed in a future code update.</p>
