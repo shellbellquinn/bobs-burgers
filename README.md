@@ -1,4 +1,4 @@
-# Awesome Burger
+# Bob's Burger (http://bobsburgerapp.herokuapp.com/)
 <p>A full stack, MVC (Model-View-Controller) application that allows you to create burgers (POST), view a list of burgers available to eat (GET), devour burgers (PUT), and throw them away after devoured (DELETE).</p>
 <img src="./public/assets/img/cheeseburger.png">
 
@@ -27,7 +27,7 @@ For more information about the MVC design pattern, check out the following resou
 ## <a name="getting-started"></a> Getting started
 The following section will take you through the steps of setting up this application and getting it running locally on your computer.
 
-If you don't want to set up this project locally and just want to see the deployed application, go to  https://gentle-caverns-56054.herokuapp.com/.
+If you don't want to set up this project locally and just want to see the deployed application, go tohttp://bobsburgerapp.herokuapp.com/ 
 
 To set up this application locally on your computer, perform the following steps:
   1. [Clone the repository](#clone-repository)
@@ -42,12 +42,12 @@ To set up this application locally on your computer, perform the following steps
 ### <a name="clone-repository"></a> 1. Clone the repository
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
 <pre>
-  git clone https://github.com/philipstubbs13/burger.git
-  cd burger
+  git clone https://github.com/shellbellquinn/bobs-burgers.git
+  cd bobs-burgers
 </pre>
 
 #### <a name="structure-of-project"></a> Structure of the project
-<p>After you clone the repository, navigate to the project root directory (burger). The project directory structure is set up as follows:</p>
+<p>After you clone the repository, navigate to the project root directory. The project directory structure is set up as follows:</p>
 <ul>
   <li> 
     <p><b>server.js</b>: This file does the following:</p>
@@ -123,10 +123,10 @@ To set up a development database that you can use with this application, perform
 <li><p>Open the <b>db/schema.sql</b> file and paste the contents of this file into MySQL Workbench.</p></li>
 <li><p>Execute the following statements:</p>
   <pre>
-  CREATE DATABASE burger_db;
-  USE burger_db;
+  CREATE DATABASE bburger;
+  USE bburger;
   </pre>
-  <p>Running these statements creates a database called <b>burger_db</b> and sets it as the current database being used.</p>
+  <p>Running these statements creates a database called <b>bburger_db</b> and sets it as the current database being used.</p>
 </li>
 <li>
   <p>Execute the following statement to create a table called <b>burgers</b>.</p>
@@ -144,11 +144,17 @@ To set up a development database that you can use with this application, perform
 <li>
   <p>To populate the burgers table with some starting burger data, open up the <b>db/seeds.sql</b> file and paste the contents into MySQL Workbench. Execute the code in <b>seeds.sql</b> from MySQL Workbench:</p>
   <pre>
-  INSERT INTO burgers (burger_name, devoured) VALUES ("Awesome Burger", true);
+INSERT INTO burgers (burger_name, devoured) VALUES ("Gourdon-Hamsey Burger", true);
 
-  INSERT INTO burgers (burger_name, devoured) VALUES ("Good Burger", false);
+INSERT INTO burgers (burger_name, devoured) VALUES ("The Silentil Night Burger", false);
 
-  INSERT INTO burgers (burger_name, devoured) VALUES ("Mondo Burger", true);
+INSERT INTO burgers (burger_name, devoured) VALUES ("Poutine on the Ritz Burger", true);
+
+INSERT INTO burgers (burger_name, devoured) VALUES ("Poblano Picasso Burger", true);
+
+INSERT INTO burgers (burger_name, devoured) VALUES ("Eggers Can't Be Cheesers", false);
+
+INSERT INTO burgers (burger_name, devoured) VALUES ("Beets of Burden Burger", true);
   </pre>
   <p>Your table should look similar to the following example:</p>
   <img src="readme_images/burgers_table.png">
@@ -156,33 +162,7 @@ To set up a development database that you can use with this application, perform
 </li>
 </ol>
 
-### <a name="create-env">6. Create a .env file to store your MySQL Password</a>
-<p>If you set up MySQL to use a password to connect to your database, you need to provide your own <b>.env</b> file.
-If you did not set up MySQL with a password, you can skip this step.</p>
 
-<p>Create a file named <b>.env</b> in the project root directory (burger) with the following contents. Replace <i>mysql_password</i> with your actual MySQL password.</p>
-
-<pre>
-# MySQL Password
-
-MYSQL_PASSWORD='<i>mysql_password</i>'
-</pre>
-
-<p>This file will be used by the dotenv npm package, which will pass the password value as an environment variable to the global process.env object in node. Because <b>.env</b> is specified in the .gitignore file, the password is kept private.</p>
-
-### <a name="db-connect">7. Verify database connection information</a>
-<p>Open the <b>config/connection.js</b> file and verify that the database connection information (host, user, port, password, and database) reflects the database you just created.</p>
-<p>Modify the connection properties as needed to reflect your database instance.</p>
-<p>For example:</p>
-<pre>
-  var connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: process.env.MYSQL_PASSWORD,
-    database: "burger_db"
-  });
-</pre>
 
 ### <a name="start-server">8. Start the server</a>
 <p>After performing all of the setup steps in the <b>Getting started</b> section, navigate to the project root directory (burger) and run the following command to start the server:</p>
@@ -194,7 +174,7 @@ node server.js
 
 ## <a name="screenshots"></a> Screenshots
 
-### Welcome to Awesome Burger
+### Welcome to Bob's Burgers
 <img src="readme_images/home2.png">
 <br>
 <br>
